@@ -4,7 +4,7 @@ import os
 
 file_path = "expenses.csv"
 
-# Function to create file if it doesn't exist
+# Function to create file if it csv doesn't exist
 def create_csv_if_not_exists(path):
     if not os.path.exists(path):
         with open(path, 'w', newline='') as file:
@@ -26,7 +26,7 @@ def add_expense_to_csv(path, expense):
         writer.writerow(expense)
     print("Data added successfully!")
 
-# Main driver function
+# Main function
 def main():
     create_csv_if_not_exists(file_path)
     expense = get_expense_input()
